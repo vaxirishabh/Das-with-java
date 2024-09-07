@@ -5,16 +5,22 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("input a number ");
-        int num = sc.nextInt();
-        if (num<0){
-            System.out.println("Number is negative");
-        }else if (num > 0) {
-
-            System.out.println("number is positive");
-        }else{
-            System.out.println("number is zero");
-
+        System.out.println("Input a");
+        double a = sc.nextDouble();
+        System.out.println("Input b");
+        double b = sc.nextDouble();
+        System.out.println("input c");
+        double c = sc.nextDouble();
+        double result = b*b-4*a*c;
+        if (result>0){
+            double r1 = (-b + Math.pow(result,0.5))/(2.0*a);
+            double r2 = (-b + Math.pow(result,0.5))/(2*a);
+            System.out.println("The root are"+ r1 +"and"+r2);
+        }else if (result==0){
+            double r1 =-b/(2.0*a);
+            System.out.println("the root is:"+r1);
+        }else {
+            System.out.println("the eqtn has no real roots");
         }
     }
 }
