@@ -10,5 +10,6 @@ public class SumNNumber {
             sum = sum + i;
         }
         System.out.println("Your sum is" +sum);
+
     }
 }
